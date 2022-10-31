@@ -5,9 +5,9 @@ VALUES ("Smile"),
         ("Dawn of the Dead"),
         ("Jaws");
 
-INSERT INTO reviews(review)
-VALUES  ("Really creepy"),
-        ("Jason is just misunderstood"),
-        ("That dude just won't die"),
-        ("WOW! a lot of zombies"),
-        ("Were gonna need a bigger boat");
+INSERT INTO reviews(movie_id,review)
+VALUES  (1,"Really creepy"),
+        (2,"Jason is just misunderstood"),
+        (3,"That dude just won't die"),
+        (4,"WOW! a lot of zombies"),
+        (5,"Were gonna need a bigger boat");
