@@ -39,13 +39,16 @@ app.post('/api/add-movie', (req, res) => {
 });
 
 //deletes a movie
-app.delete('/api/movies/:id', () => {
-
+app.delete('/api/movies/:id', (req, res) => {
+    db.query('DELETE FROM movies WHERE id = ?', req.params.id)
 });
 
 //gets all movies with its associated reviews
-app.get('/api/movie-reivew', () => {
-
+app.get('/api/movie-reivew', (req, res) => {
+    const sql = `SELECT movies.movie_name AS movie, reviews.review FROM reviews INNER JOIN movies ON reviews.movie_id = movies.id ORDER BY movies.movie_name; `;
+    db.query(sql, (err, rows) => {
+        
+    })
 });
 
 //get a specific review
